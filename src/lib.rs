@@ -33,7 +33,7 @@
 //! for parsing UTF-8 then enable optional feature `simd`  
 //!  
 //! [Text]: https://docs.rs/tui/0.15.0/tui/text/struct.Text.html
-//! [ansi-to-tui]: https://github.com/uttarayan21/ansi-to-tui
+//! [ansi-to-ratatui]: https://github.com/slekup/ansi-to-ratatui
 //! [simdutf8]: https://github.com/rusticstuff/simdutf8
 
 // mod ansi;
@@ -41,7 +41,7 @@ mod code;
 mod error;
 mod parser;
 pub use error::Error;
-use tui::text::Text;
+use ratatui::text::Text;
 
 /// IntoText will convert any type that has a AsRef<[u8]> to a Text.
 pub trait IntoText {

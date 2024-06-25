@@ -1,4 +1,4 @@
-pub use ansi_to_tui::IntoText;
+pub use ansi_to_ratatui::IntoText;
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 fn criterion_benchmark(c: &mut Criterion) {

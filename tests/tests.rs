@@ -1,8 +1,8 @@
 // use ansi_to_tui::{ansi_to_text, ansi_to_text_override_style};
-use ansi_to_tui::IntoText;
+use ansi_to_ratatui::IntoText;
 use pretty_assertions::assert_eq;
-use tui::style::Stylize;
-use tui::{
+use ratatui::style::Stylize;
+use ratatui::{
     style::{Color, Style},
     text::{Line, Span, Text},
 };

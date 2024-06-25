@@ -11,11 +11,11 @@ use nom::{
     sequence::{delimited, preceded, terminated, tuple},
     IResult, Parser,
 };
-use std::str::FromStr;
-use tui::{
+use ratatui::{
     style::{Color, Modifier, Style},
     text::{Line, Span, Text},
 };
+use std::str::FromStr;
 
 #[derive(Debug, Clone, Copy, Eq, PartialEq)]
 enum ColorType {
@@ -37,7 +37,7 @@ struct AnsiStates {
     pub style: Style,
 }
 
-impl From<AnsiStates> for tui::style::Style {
+impl From<AnsiStates> for ratatui::style::Style {
     fn from(states: AnsiStates) -> Self {
         let mut style = states.style;
         if states.items.is_empty() {

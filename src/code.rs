@@ -1,4 +1,4 @@
-use tui::style::Color;
+use ratatui::style::Color;
 
 /// This enum stores most types of ansi escape sequences  
 ///
