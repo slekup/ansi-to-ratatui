@@ -116,7 +116,7 @@ fn line(style: Style) -> impl Fn(&[u8]) -> IResult<&[u8], (Line<'static>, Style)
         let mut spans = Vec::new();
         let mut last = style;
         while let Ok((s, span)) = span(last)(text) {
-            // Since reset now tracks seperately we can skip the reset check
+            // Since reset now tracks separately we can skip the reset check
             last = last.patch(span.style);
 
             if spans.is_empty() || !span.content.is_empty() {
