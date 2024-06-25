@@ -28,7 +28,7 @@ fn test_string() {
 
 #[test]
 fn test_unicode() {
-    // these are 8 byte unicode charachters
+    // these are 8 byte unicode characters
     // first 4 bytes are for the unicode and the last 4 bytes are for the color / variant
     let bytes = "AAA🅱️🅱️🅱️".as_bytes().to_vec();
     let output = Text::raw("AAA🅱️🅱️🅱️");
